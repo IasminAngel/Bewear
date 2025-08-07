@@ -15,7 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function Authentication() {
   return (
-    <div className="flex w-full max-w-sm flex-col gap-6">
+    <div className="flex w-full max-w-sm flex-col gap-6 p-5">
       <Tabs defaultValue="sign-in">
         <TabsList>
           <TabsTrigger value="sign-in">Entrar</TabsTrigger>
@@ -31,40 +31,47 @@ export function Authentication() {
             </CardHeader>
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-name">Name</Label>
-                <Input id="tabs-demo-name" defaultValue="Pedro Duarte" />
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" defaultValue="Digite seu email" />
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-username">Username</Label>
-                <Input id="tabs-demo-username" defaultValue="@peduarte" />
+                <Label htmlFor="password">Senha</Label>
+                <Input id="password" defaultValue="Digite sua senha" />
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Save changes</Button>
+              <Button>Entrar</Button>
             </CardFooter>
           </Card>
         </TabsContent>
         <TabsContent value="sign-up">
           <Card>
             <CardHeader>
-              <CardTitle>Password</CardTitle>
+              <CardTitle>Criar Conta</CardTitle>
               <CardDescription>
-                Change your password here. After saving, you&apos;ll be logged
-                out.
+                Crie uma nova conta preenchendo os campos abaixo.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-current">Current password</Label>
-                <Input id="tabs-demo-current" type="password" />
+                <Label htmlFor="name">Nome</Label>
+                <Input id="name" placeholder="Digite seu nome" type="text" />
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-new">New password</Label>
-                <Input id="tabs-demo-new" type="password" />
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" placeholder="Digite seu email" type="email" />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="password">Senha</Label>
+                <Input
+                  id="password"
+                  placeholder="Digite sua senha"
+                  type="password"
+                />
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Save password</Button>
+              <Button>Criar Conta</Button>
             </CardFooter>
           </Card>
         </TabsContent>
